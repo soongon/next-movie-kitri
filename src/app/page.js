@@ -1,8 +1,12 @@
 import MovieCard from "@/components/MovieCard";
+import { redirect } from "next/navigation";
 
 // next14에서 작성한 모든 컴포넌트는 (App 디렉토리 내의 컴포넌트) 서버 컴포넌트임
 export default async function Home() {
 
+  redirect('/category/now_playing');
+
+  /*
   //1. imdb에서 데이터 페칭 수행 --> movie 데이터 json 파일 응답
   //2. json.results --> []이 응답.. 20개의 영화 데이터를 포함
   const options = {
@@ -26,4 +30,5 @@ export default async function Home() {
       }
     </div>
   );
+  */
 }
