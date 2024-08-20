@@ -1,3 +1,4 @@
+import MovieCard from "@/components/MovieCard";
 
 // next14에서 작성한 모든 컴포넌트는 (App 디렉토리 내의 컴포넌트) 서버 컴포넌트임
 export default async function Home() {
@@ -17,10 +18,10 @@ export default async function Home() {
   const movies = json.results;  // 데이터 확보
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-center">
       {
         movies.map(movie => {
-          return <div>{movie.title}</div>
+          return <MovieCard movie={movie} />
         })
       }
     </div>
