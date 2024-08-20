@@ -14,7 +14,7 @@ export default async function MovieCategoryPage({params}) {
     };
       
     try {
-        const response = await fetch(`https://pi.themoviedb.org/3/movie/${movieCat}?language=ko-KR&page=1&region=kr`, options)
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieCat}?language=ko-KR&page=1&region=kr`, options)
         const json = await response.json();
         const movies = json.results;
 
